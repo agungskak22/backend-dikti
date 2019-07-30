@@ -167,8 +167,8 @@
             <!-- Page Header -->
             <div class="page-header row no-gutters py-4">
               <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                <span class="text-uppercase page-subtitle">Blog Posts</span>
-                <h3 class="page-title">Add New Post</h3>
+                <span class="text-uppercase page-subtitle">Semua postingan</span>
+                <h3 class="page-title">Bencana Alam</h3>
               </div>
             </div>
             <!-- End Page Header -->
@@ -179,6 +179,14 @@
                   <div class="card-body">
                     <form class="add-new-post">
                       <input class="form-control form-control-lg mb-3" type="text" placeholder="Your Post Title">
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option selected>Pilih Kategory</option>
+                          <option>Keluarga</option>
+                          <option>Umum</option>
+                          <option>Anak Anak</option>
+                        </select>
+                      </div>
                       <div id="editor-container" class="add-new-post__editor mb-1"></div>
                     </form>
                   </div>
@@ -193,29 +201,9 @@
                   </div>
                   <div class='card-body p-0'>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item p-3">
-                        <span class="d-flex mb-2">
-                          <i class="material-icons mr-1">flag</i>
-                          <strong class="mr-1">Status:</strong> Draft
-                          <a class="ml-auto" href="#">Edit</a>
-                        </span>
-                        <span class="d-flex mb-2">
-                          <i class="material-icons mr-1">visibility</i>
-                          <strong class="mr-1">Visibility:</strong>
-                          <strong class="text-success">Public</strong>
-                          <a class="ml-auto" href="#">Edit</a>
-                        </span>
-                        <span class="d-flex mb-2">
-                          <i class="material-icons mr-1">calendar_today</i>
-                          <strong class="mr-1">Schedule:</strong> Now
-                          <a class="ml-auto" href="#">Edit</a>
-                        </span>
-                        <span class="d-flex">
-                          <i class="material-icons mr-1">score</i>
-                          <strong class="mr-1">Readability:</strong>
-                          <strong class="text-warning">Ok</strong>
-                        </span>
-                      </li>
+                      <div class="col-lg-12 col-md12">
+                          <input type="file">
+                      </div>
                       <li class="list-group-item d-flex px-3">
                         <button class="btn btn-sm btn-outline-accent">
                           <i class="material-icons">save</i> Save Draft</button>
@@ -309,3 +297,58 @@
     <script src="scripts/app/app-blog-new-post.1.1.0.js"></script>
   </body>
 </html>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.head {
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.blue-btn:hover,
+.blue-btn:active,
+.blue-btn:focus,
+.blue-btn {
+  background: transparent;
+  border: solid 1px #27a9e0;
+  border-radius: 3px;
+  color: #27a9e0;
+  font-size: 16px;
+  margin-bottom: 20px;
+  outline: none !important;
+  padding: 10px 20px;
+}
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  height: 43px;
+  margin-top: 0;
+}
+
+.fileUpload input.uploadlogo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  width: 100%;
+  height: 42px;
+}
+
+/*Chrome fix*/
+input::-webkit-file-upload-button {
+  cursor: pointer !important;
+  height: 42px;
+  width: 100%;
+}
+</style>
