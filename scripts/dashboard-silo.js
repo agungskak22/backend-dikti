@@ -3,7 +3,7 @@
 }(0, function() {
 	"use strict";
 	if ("undefined" == typeof Chart) throw new Error("Shards Dashboard requires the Chart.js library in order to function properly.");
-	window.ShardsDashboards = window.ShardsDashboards ? window.ShardsDashboards : {}, $.extend($.easing, {
+	window.SiloDashboards = window.SiloDashboards ? window.SiloDashboards : {}, $.extend($.easing, {
 		easeOutSine: function(t, o, e, i, n) {
 			return i * Math.sin(o / n * (Math.PI / 2)) + e
 		}
